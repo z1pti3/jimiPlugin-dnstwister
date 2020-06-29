@@ -72,6 +72,5 @@ class _dnstwister():
         response = self.getAPI(url)
         if response:
             response = json.loads(response)
-            return { "ip" : response["a"]["ip"], "when" : response["a"]["when"], "mx" : response["mx"] }
+            return { "ip" : response["a"]["ip"], "mx" : response["mx"] }
         return None
-
