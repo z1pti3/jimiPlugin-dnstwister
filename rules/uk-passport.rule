@@ -1,0 +1,10 @@
+rule keywordPassport : keyword passport
+{
+  strings:
+    $doc1    = "passport" 
+    $doc2    = "Passport"     
+  condition:
+    any of them
+}
+
+

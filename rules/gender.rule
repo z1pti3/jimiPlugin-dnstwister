@@ -1,0 +1,33 @@
+rule keywordGender : keyword gender
+{
+  strings:
+    $string1 = "gender"
+    $string2 = "Gender"
+    $string3 = "GENDER"
+    $string4 = "Sex"
+    $string5 = "sex"
+    $string6 = "SEX"
+  condition:
+    any of them
+}
+
+rule keywordMale : keyword gender
+{
+  strings:
+    $string1 = "Male"
+    $string2 = "MALE"
+    $string3 = "male"
+  condition:
+    any of them and keywordGender
+}
+
+
+rule keywordFemale : keyword gender
+{
+  strings:
+    $string1 = "Female"
+    $string2 = "FEMALE"
+    $string3 = "female"
+  condition:
+    any of them and keywordGender
+}

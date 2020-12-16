@@ -1,0 +1,76 @@
+rule keywordReturnToWork : keyword hr
+{
+  strings:
+    $rtw1    = "Return To Work"
+    $trw2    = "Return to Work"
+    $rtw3    = "return to work" 
+    $rtw4    = "RTW"
+    $rtw5    = "rtw" 
+    $pd10    = "Next Of Kin"
+    $pd11    = "Next of Kin"
+    $pd12    = "next of kin"
+    $hc3    = "OH refferal"
+    $hc4    = "OH Refferal"
+    $rehabilitation1   = "rehabilitation"
+    $rehabilitation2   = "Rehabilitation"
+  condition:
+    any of them
+}
+
+rule keywordSickness : keyword hr
+{
+  strings:
+    $mh3   = "medication"
+    $mh4   = "Medication"
+  condition:
+    any of them
+}
+
+rule keywordIllness : keyword hr
+{
+  strings:
+    $illness1   = "covid"       
+    $illness2   = "sick"        
+    $illness3   = "illness"     
+    $illness4   = "vomit"       
+    $illness5   = "diahrrea"    
+    $illness6   = "cancer"      
+    $illness7   = "vertigo"     
+    $illness8   = "chemotherapy"
+    $illness9   = "Chemotherapy" 
+    $illness10   = "Covid"       
+    $illness11   = "Sick"        
+    $illness12   = "Illness"     
+    $illness13   = "Vomit"       
+    $illness14   = "Diahrrea"    
+    $illness15   = "Cancer"      
+    $illness16   = "Vertigo"  
+  condition:
+    any of them
+}
+
+rule keywordMentalHealth : keyword hr
+{
+  strings:
+    $mh1   = "anxiety" 
+    $mh2   = "Anxiety"           
+    $mh3   = "depression"
+    $mh4   = "Depression"  
+  condition:
+    any of them
+}
+
+rule keywordPregnancy : keyword hr
+{
+  strings:
+    $pregnancy1 = "preg"        
+    $pregnancy2 = "Preg"        
+    $pregnancy3 = "abort"       
+    $pregnancy4 = "Abort"       
+    $pregnancy5 = "abortion"    
+    $pregnancy6 = "Abortion"    
+    $pregnancy7 = "Miscarriage"
+    $pregnancy8 = "miscarriage" 
+  condition:
+    any of them
+}

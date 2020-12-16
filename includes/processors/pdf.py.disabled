@@ -1,0 +1,26 @@
+
+import PyPDF2, time
+
+from plugins.datasee.includes import processor
+
+class _pdf(processor.processor):
+    supportedFileTypes = ["pdf"]
+    def process(self):
+        try:
+            if self.dsFile.extension in ["pdf"]:
+                pdfFileObj = open(self.dsFile.path, 'rb')
+                pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
+                if pdfReader.isEncrypted == False:
+                    for page in range(pdfReader.numPages):
+                        pageObj = pdfReader.getPage(page)
+                        pageText = pageObj.extractText()
+                        # print(pageObj.extractText())
+                        # time.sleep(100)
+                        yield processor.processItem(1,pageText)
+                else:
+                    yield processor.processItem(-2,"")
+                pdfFileObj.close() 
+        except Exception as e:
+            yield processor.processItem(-4,"")
+        return []
+
