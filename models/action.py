@@ -9,9 +9,9 @@ class _dnstwisterIPResolution(action._action):
         domain = helpers.evalString(self.domain,{"data" : data})
 
         if "ca" in dnstwisterSettings:
-            dns = dnstwister._dnstwister(dnstwisterSettings["ca"],timeout=dnstwisterSettings["requestTimeout"])
+            dns = dnstwister._dnstwister(dnstwisterSettings["ca"],requestTimeout=dnstwisterSettings["requestTimeout"])
         else:
-            dns = dnstwister._dnstwister(timeout=dnstwisterSettings["requestTimeout"])
+            dns = dnstwister._dnstwister(requestTimeout=dnstwisterSettings["requestTimeout"])
 
         actionResult["data"]["ip"] = dns.IPResolution(domain)
         if actionResult["data"]["ip"]:
@@ -29,9 +29,9 @@ class _dnstwisterParkedCheck(action._action):
         domain = helpers.evalString(self.domain,{"data" : data})
 
         if "ca" in dnstwisterSettings:
-            dns = dnstwister._dnstwister(dnstwisterSettings["ca"],timeout=dnstwisterSettings["requestTimeout"])
+            dns = dnstwister._dnstwister(dnstwisterSettings["ca"],requestTimeout=dnstwisterSettings["requestTimeout"])
         else:
-            dns = dnstwister._dnstwister(timeout=dnstwisterSettings["requestTimeout"])
+            dns = dnstwister._dnstwister(requestTimeout=dnstwisterSettings["requestTimeout"])
 
         actionResult["data"]["parked"] = dns.parkedCheck(domain)
         if actionResult["data"]["parked"]:
@@ -49,9 +49,9 @@ class _dnstwisterWhois(action._action):
         domain = helpers.evalString(self.domain,{"data" : data})
 
         if "ca" in dnstwisterSettings:
-            dns = dnstwister._dnstwister(dnstwisterSettings["ca"],timeout=dnstwisterSettings["requestTimeout"])
+            dns = dnstwister._dnstwister(dnstwisterSettings["ca"],requestTimeout=dnstwisterSettings["requestTimeout"])
         else:
-            dns = dnstwister._dnstwister(timeout=dnstwisterSettings["requestTimeout"])
+            dns = dnstwister._dnstwister(requestTimeout=dnstwisterSettings["requestTimeout"])
 
         actionResult["data"]["whois"] = dns.whois(domain)
         if actionResult["data"]["whois"]:
@@ -69,9 +69,9 @@ class _dnstwisterGoogleSafeBrowsing(action._action):
         domain = helpers.evalString(self.domain,{"data" : data})
 
         if "ca" in dnstwisterSettings:
-            dns = dnstwister._dnstwister(dnstwisterSettings["ca"],timeout=dnstwisterSettings["requestTimeout"])
+            dns = dnstwister._dnstwister(dnstwisterSettings["ca"],requestTimeout=dnstwisterSettings["requestTimeout"])
         else:
-            dns = dnstwister._dnstwister(timeout=dnstwisterSettings["requestTimeout"])
+            dns = dnstwister._dnstwister(requestTimeout=dnstwisterSettings["requestTimeout"])
 
         actionResult["data"]["googleSafeBrowsing"] = dns.googleSafeBrowsing(domain)
         if actionResult["data"]["googleSafeBrowsing"]:
@@ -89,9 +89,9 @@ class _dnstwisterFuzz(action._action):
         domain = helpers.evalString(self.domain,{"data" : data})
 
         if "ca" in dnstwisterSettings:
-            dns = dnstwister._dnstwister(dnstwisterSettings["ca"],timeout=dnstwisterSettings["requestTimeout"])
+            dns = dnstwister._dnstwister(dnstwisterSettings["ca"],requestTimeout=dnstwisterSettings["requestTimeout"])
         else:
-            dns = dnstwister._dnstwister(timeout=dnstwisterSettings["requestTimeout"])
+            dns = dnstwister._dnstwister(requestTimeout=dnstwisterSettings["requestTimeout"])
 
         actionResult["data"]["fuzz"] = dns.fuzz(domain)
         if actionResult["data"]["fuzz"]:
@@ -109,9 +109,9 @@ class _dnstwisterReport(action._action):
         domain = helpers.evalString(self.domain,{"data" : data})
 
         if "ca" in dnstwisterSettings:
-            dns = dnstwister._dnstwister(dnstwisterSettings["ca"],timeout=dnstwisterSettings["requestTimeout"])
+            dns = dnstwister._dnstwister(dnstwisterSettings["ca"],requestTimeout=dnstwisterSettings["requestTimeout"])
         else:
-            dns = dnstwister._dnstwister(timeout=dnstwisterSettings["requestTimeout"])
+            dns = dnstwister._dnstwister(requestTimeout=dnstwisterSettings["requestTimeout"])
 
         actionResult["data"]["report"] = dns.report(domain)
         if actionResult["data"]["report"]:
