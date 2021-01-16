@@ -33,7 +33,7 @@ class _dnstwisterObserve(trigger._trigger):
                     domainReport["ip"] = ""
 
                 if dnstwisterObj.ip != domainReport["ip"] or dnstwisterObj.mx != domainReport["mx"]:
-                    dnstwisterObj.updateRecord(fuzzDomain["domain"],domainReport["ip"],domainReport["mx"],domainReport["when"],fuzzDomain["fuzzer"])
+                    dnstwisterObj.updateRecord(fuzzDomain["domain"],domainReport["ip"],domainReport["mx"],fuzzDomain["fuzzer"])
                     domainReport["domain"] = fuzzDomain["domain"]
                     if update:
                         domainReport["type"] = "update"
