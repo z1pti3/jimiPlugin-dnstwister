@@ -1,0 +1,299 @@
+{
+   "name": "dnstwister",
+   "author": "z1p",
+   "version": 0.2,
+   "categories": [],
+   "description": "",
+   "icon": null,
+   "requirements": {
+      "jimi_min_version": null,
+      "jimi_max_version": null,
+      "plugins": []
+   },
+   "collections": {},
+   "triggers": {
+      "dnstwisterObserve": {
+         "display_name": "dnstwisterObserve",
+         "className": "_dnstwisterObserve",
+         "class_location": "models.trigger",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "domains",
+               "schema_value": "domains",
+               "type": "json-input",
+               "label": "domains",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      }
+   },
+   "actions": {
+      "dnstwisterIPResolution": {
+         "display_name": "dnstwisterIPResolution",
+         "className": "_dnstwisterIPResolution",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "domain",
+               "schema_value": "domain",
+               "type": "input",
+               "label": "domain",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "dnstwisterParkedCheck": {
+         "display_name": "dnstwisterParkedCheck",
+         "className": "_dnstwisterParkedCheck",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "domain",
+               "schema_value": "domain",
+               "type": "input",
+               "label": "domain",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "dnstwisterWhois": {
+         "display_name": "dnstwisterWhois",
+         "className": "_dnstwisterWhois",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "domain",
+               "schema_value": "domain",
+               "type": "input",
+               "label": "domain",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "dnstwisterGoogleSafeBrowsing": {
+         "display_name": "dnstwisterGoogleSafeBrowsing",
+         "className": "_dnstwisterGoogleSafeBrowsing",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "domain",
+               "schema_value": "domain",
+               "type": "input",
+               "label": "domain",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "dnstwisterFuzz": {
+         "display_name": "dnstwisterFuzz",
+         "className": "_dnstwisterFuzz",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "domain",
+               "schema_value": "domain",
+               "type": "input",
+               "label": "domain",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "dnstwisterReport": {
+         "display_name": "dnstwisterReport",
+         "className": "_dnstwisterReport",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "domain",
+               "schema_value": "domain",
+               "type": "input",
+               "label": "domain",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      }
+   },
+   "settings": {}
+}
